@@ -1,0 +1,49 @@
+
+
+
+<div ng-app = "usersApp" ng-controller = "usersController">
+     
+  <form >
+   
+   <fieldset>
+       
+   <p>  <label  for="nom" > Nom : </label> <input type="text"  name="nom" placeholder="ex : mouhoubi" id ="nom" [(ngModel)]="info.nom"/> </p>
+   
+   <p>  <label  for="prenom" > Prenom : </label> <input type="text" name="prenom" placeholder="ex : nesrine" id ="prenom" [(ngModel)]="info.prenom"/> </p>
+     
+   <p>  <label  for="date" > Date de naissance : </label> <input type="date" name="dzte" placeholder="ex : 10/10/2010" id ="date" [(ngModel)]="info.date" /> </p>
+
+   <p> Ville de naissance : <select name="ville" [(ngModel)]="info.ville">
+     <optgroup label="algérie"> 
+     <option> Oran</option>
+     <option> Alger</option>
+     </optgroup>
+     <optgroup label="France">
+     <option> Paris</option>
+     <option> Lion </option>
+     </optgroup>     
+     
+    </select> 
+   </p>
+
+ 
+ <p> <input type="radio" name="sex" [(ngModel)]="sex"> homme   </p>
+ <p> <input type="radio" name="sex" [(ngModel)]="sex"> femme   </p>
+
+
+ <p>  <label  for="email"> E-mail : </label>  <input type="email" name="email" placeholder="ex : hfjdie@djid.com" id ="email" [(ngModel)]="email"/> </p>
+
+ <p>  <label  for="password"> Mot de passe : </label>  <input type="password" name="password" id ="password" [(ngModel)]="password"/> </p>
+
+ <p>commentaire <textarea rows=3 cols=15 > </textarea></p>
+ 
+<p><input type="submit" value ="afficher" (click)="onAfficher()"></p>
+<p><input type="submit" value ="valider" (click)="onValider()" ></p> 
+    </fieldset>
+ 
+</form>
+
+ 
+ </div>
+
+<!-- script controller.js-->
