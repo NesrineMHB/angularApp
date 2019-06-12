@@ -42,8 +42,19 @@
     </fieldset>
  
 </form>
+  
+ <div>
+  <h3>Liste utilisateurs</h3>
+  <ul>
+    <li *ngFor="let u of users ">
+      {{u.nom}}, {{u.prenom}}, {{u.date}}
+    </li>
+  </ul>
 
+ </div>
  
  </div>
+
+
 
 <!-- script controller.js-->
